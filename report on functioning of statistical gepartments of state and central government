@@ -1,0 +1,481 @@
+\documentclass[12pt,a4paper]{article}
+
+%------------------------------------------------
+% PACKAGES
+%------------------------------------------------
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+%------------------------------------------------
+% FORMATTING
+%------------------------------------------------
+\onehalfspacing
+
+\titleformat{\section}
+{\large\bfseries}
+{\thesection.}{0.5em}{}
+
+\titleformat{\subsection}
+{\normalsize\bfseries}
+{\thesubsection}{0.5em}{}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Statistical Departments of India and Kerala}
+\fancyhead[R]{Mathematics Assignment}
+\fancyfoot[C]{\thepage}
+
+%------------------------------------------------
+% DOCUMENT
+%------------------------------------------------
+\begin{document}
+
+%================================================
+% TITLE PAGE
+%================================================
+
+\begin{titlepage}
+    \centering
+
+    \vspace*{1.5cm}
+
+    {\LARGE \textbf{MATHEMATICS ASSIGNMENT}}\\[1.2cm]
+
+    {\Large \textbf{A REPORT ON THE ACTIVITIES AND FUNCTIONS}}\\[0.3cm]
+
+    {\Large \textbf{OF STATISTICAL DEPARTMENTS}}\\[0.3cm]
+
+    {\Large \textbf{UNDER THE GOVERNMENT OF INDIA AND KERALA}}\\[1.5cm]
+
+    \rule{\textwidth}{0.5pt}\\[0.5cm]
+
+    {\large \textbf{Ministry of Statistics and Programme Implementation}}\\
+    {\large Government of India}\\[0.5cm]
+
+    {\large and}\\[0.5cm]
+
+    {\large \textbf{Department of Economics and Statistics}}\\
+    {\large Government of Kerala}
+
+    \rule{\textwidth}{0.5pt}\\[2cm]
+
+    \begin{tabular}{ll}
+        \textbf{Name:} & Poojitha Santhosh \\[0.4cm]
+        \textbf{Course:} & M.Tech CSE (AI \& SE) \\[0.4cm]
+    \end{tabular}
+
+    \vfill
+
+\end{titlepage}
+
+%================================================
+% CONTENT
+%================================================
+
+\section{Introduction}
+
+Statistics plays an important role in government administration. It provides information for planning, policy formulation, resource allocation and evaluation of development programmes. Statistical departments collect, analyse and publish economic, social, demographic and environmental data.
+
+In India, the major central institution responsible for official statistics is the \textbf{Ministry of Statistics and Programme Implementation (MoSPI)}. At the state level, the \textbf{Department of Economics and Statistics (DES), Government of Kerala} performs major statistical functions.
+
+%================================================
+% GOVERNMENT OF INDIA
+%================================================
+
+\section{Statistical Activities under the Government of India}
+
+MoSPI is the nodal ministry for the organized development of India's statistical system. Its activities are mainly carried out through the National Statistical Office and other divisions.
+
+The major activities and functions include:
+
+\begin{itemize}[noitemsep]
+    \item Conducting sample surveys on employment, consumption, health, education and socio-economic subjects.
+    
+    \item Preparing National Accounts Statistics, including GDP, GVA and related indicators.
+    
+    \item Compiling price statistics such as the Consumer Price Index (CPI).
+    
+    \item Preparing industrial statistics, including IIP and ASI.
+    
+    \item Producing labour and employment statistics through the Periodic Labour Force Survey (PLFS).
+    
+    \item Developing indicators for monitoring Sustainable Development Goals (SDGs).
+    
+    \item Disseminating statistical reports and datasets.
+    
+    \item Monitoring selected government programmes and infrastructure projects.
+\end{itemize}
+
+These activities provide quantitative evidence for national planning and public policy.
+
+%================================================
+% GOVERNMENT OF KERALA
+%================================================
+
+\section{Statistical Activities under the Government of Kerala}
+
+The \textbf{Department of Economics and Statistics (DES), Government of Kerala} is the nodal agency for official statistics in the state. It collects and analyses data required for state planning and development.
+
+The major activities and functions include:
+
+\begin{itemize}[noitemsep]
+    \item Preparing State Income Statistics, including GSDP, GVA and per-capita income.
+    
+    \item Collecting agricultural statistics on crop area, production, yield and land utilisation through activities such as EARAS.
+    
+    \item Collecting price statistics, including retail prices and consumer price indices.
+    
+    \item Preparing industrial statistics through IIP and ASI.
+    
+    \item Collecting population and vital statistics, including births and deaths.
+    
+    \item Conducting and participating in National Sample Surveys on employment, household expenditure, health and education.
+    
+    \item Compiling labour and housing statistics.
+    
+    \item Providing local-level statistics for district, municipality and panchayat planning.
+\end{itemize}
+
+%================================================
+% RECENT STATISTICAL SURVEY AND GRAPH
+%================================================
+
+\section{Recent Statistical Survey: PLFS}
+
+The recent \textbf{Periodic Labour Force Survey (PLFS) 2023--24} provides a useful example of statistical activity in both India and Kerala. For persons aged 15 years and above, the unemployment rate was \textbf{3.2\% in India} and \textbf{7.2\% in Kerala}. The following graph shows the unemployment trend reported through PLFS from 2017--18 to 2023--24.
+
+\begin{figure}[h!]
+\centering
+
+\begin{tikzpicture}
+\begin{axis}[
+    width=0.90\textwidth,
+    height=8cm,
+    xlabel={PLFS Year},
+    ylabel={Unemployment Rate (\%)},
+    ymin=0,
+    ymax=13,
+    xtick={1,2,3,4,5,6,7},
+    xticklabels={
+        2017--18,
+        2018--19,
+        2019--20,
+        2020--21,
+        2021--22,
+        2022--23,
+        2023--24
+    },
+    ytick={0,2,4,6,8,10,12},
+    grid=major,
+    legend style={
+        at={(0.5,-0.22)},
+        anchor=north,
+        legend columns=2
+    },
+    tick label style={font=\small},
+    label style={font=\small},
+    every node near coord/.append style={
+        font=\scriptsize,
+        /pgf/number format/fixed,
+        /pgf/number format/precision=1
+    }
+]
+
+% India
+\addplot[
+    mark=*,
+    thick
+] coordinates {
+    (1,6.0)
+    (2,5.8)
+    (3,4.8)
+    (4,4.2)
+    (5,4.1)
+    (6,3.2)
+    (7,3.2)
+};
+
+\addlegendentry{India}
+
+% Kerala
+\addplot[
+    mark=square*,
+    thick
+] coordinates {
+    (1,11.4)
+    (2,9.0)
+    (3,10.0)
+    (4,10.1)
+    (5,9.6)
+    (6,7.0)
+    (7,7.2)
+};
+
+\addlegendentry{Kerala}
+
+\end{axis}
+\end{tikzpicture}
+
+\caption{Unemployment Rate in India and Kerala, PLFS 2017--18 to 2023--24}
+\end{figure}
+
+%================================================
+% CENSUS DATA
+%================================================
+
+\section{Census and Recent Survey Data}
+
+The \textbf{Population Census 2011} remains the latest completed population census for India and Kerala. Selected indicators show differences in population, literacy and sex ratio between the national and state levels.
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.3}
+
+\begin{tabular}{lrr}
+\toprule
+\textbf{Indicator} & \textbf{India} & \textbf{Kerala} \\
+\midrule
+Population (million) & 1210.9 & 33.4 \\
+Literacy Rate (\%) & 74.04 & 93.91 \\
+Sex Ratio (females per 1000 males) & 943 & 1084 \\
+\bottomrule
+\end{tabular}
+
+\caption{Selected Census 2011 Indicators for India and Kerala}
+\end{table}
+
+\begin{figure}[h!]
+\centering
+
+\begin{tikzpicture}
+\begin{axis}[
+    ybar,
+    width=0.85\textwidth,
+    height=7cm,
+    bar width=18pt,
+    ylabel={Percentage},
+    symbolic x coords={India,Kerala},
+    xtick=data,
+    ymin=0,
+    ymax=100,
+    ytick={0,20,40,60,80,100},
+    legend style={
+        at={(0.5,-0.18)},
+        anchor=north,
+        legend columns=2
+    },
+    grid=major,
+    nodes near coords,
+    nodes near coords align={vertical},
+    tick label style={font=\small},
+    label style={font=\small}
+]
+
+\addplot coordinates {(India,74.04) (Kerala,93.91)};
+\addlegendentry{Literacy Rate}
+
+\end{axis}
+\end{tikzpicture}
+
+\caption{Literacy Rate in India and Kerala, Census 2011}
+\end{figure}
+
+%================================================
+% RECENT HOUSEHOLD CONSUMPTION SURVEY
+%================================================
+
+\subsection{Household Consumption Expenditure Survey 2022--23}
+
+The \textbf{Household Consumption Expenditure Survey (HCES) 2022--23} provides recent information on average monthly per-capita consumption expenditure (MPCE). The figures below compare rural and urban India with Kerala.
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.3}
+
+\begin{tabular}{lrr}
+\toprule
+\textbf{Area} & \textbf{Rural MPCE (Rs.)} & \textbf{Urban MPCE (Rs.)} \\
+\midrule
+All-India & 3,773 & 6,459 \\
+Kerala & 5,924 & 7,078 \\
+\bottomrule
+\end{tabular}
+
+\caption{Average Monthly Per-Capita Consumption Expenditure, HCES 2022--23}
+\end{table}
+
+\begin{figure}[h!]
+\centering
+
+\begin{tikzpicture}
+\begin{axis}[
+    ybar,
+    width=0.85\textwidth,
+    height=7cm,
+    bar width=16pt,
+    ylabel={Average MPCE (Rs.)},
+    symbolic x coords={India,Kerala},
+    xtick=data,
+    ymin=0,
+    ymax=8000,
+    ytick={0,2000,4000,6000,8000},
+    legend style={
+        at={(0.5,-0.18)},
+        anchor=north,
+        legend columns=2
+    },
+    grid=major,
+    nodes near coords,
+    nodes near coords align={vertical},
+    tick label style={font=\small},
+    label style={font=\small}
+]
+
+\addplot coordinates {(India,3773) (Kerala,5924)};
+\addlegendentry{Rural}
+
+\addplot coordinates {(India,6459) (Kerala,7078)};
+\addlegendentry{Urban}
+
+\end{axis}
+\end{tikzpicture}
+
+\caption{Average MPCE in India and Kerala, HCES 2022--23}
+\end{figure}
+
+%================================================
+% COMPARISON
+%================================================
+
+\section{Comparison of Major Functions}
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.4}
+
+\begin{tabular}{p{3.5cm}p{5cm}p{5cm}}
+\toprule
+\textbf{Area} &
+\textbf{Government of India} &
+\textbf{Government of Kerala} \\
+\midrule
+
+Main Institution &
+MoSPI / National Statistical Office &
+Department of Economics and Statistics \\
+
+Economic Statistics &
+GDP, GVA and National Accounts &
+GSDP, GVA and State Income \\
+
+Agriculture &
+National agricultural statistics &
+EARAS and agricultural statistics \\
+
+Industry &
+IIP, ASI and Economic Census &
+IIP, ASI and industrial statistics \\
+
+Prices &
+CPI and inflation statistics &
+CPI, retail and other price statistics \\
+
+Labour &
+PLFS and labour surveys &
+Labour and housing statistics \\
+
+Socio-economic Surveys &
+National Sample Surveys &
+State and National Sample Surveys \\
+
+Demography &
+National demographic statistics &
+State-level vital statistics \\
+
+\bottomrule
+\end{tabular}
+
+\caption{Comparison of Statistical Activities in India and Kerala}
+\end{table}
+
+%================================================
+% IMPORTANCE
+%================================================
+
+\section{Importance of Government Statistics}
+
+Government statistics supports budgeting, employment planning, agricultural development, industrial policy, welfare programmes and infrastructure development.
+
+Mathematical methods such as sampling, estimation, averages, variance, index numbers, correlation and regression are widely used. Thus, statistical departments provide an important practical application of mathematics and statistics.
+
+%================================================
+% CONCLUSION
+%================================================
+
+\section{Conclusion}
+
+The statistical departments of India and Kerala support evidence-based governance. MoSPI produces national statistics, while DES performs similar functions at the state level, with emphasis on agriculture, state income, local statistics and socio-economic conditions.
+
+Reliable statistics enables governments to identify development needs, formulate policies and measure outcomes. Thus, statistical departments connect mathematical analysis with government administration and social development.
+
+%================================================
+% REFERENCES
+%================================================
+
+\begin{thebibliography}{9}
+
+\bibitem{mospi}
+Ministry of Statistics and Programme Implementation,
+Government of India.
+\textit{Official Website of MoSPI}.
+\url{https://www.mospi.gov.in/}
+
+\bibitem{kerala}
+Department of Economics and Statistics,
+Government of Kerala.
+\textit{Official Website of DES Kerala}.
+\url{https://ecostat.kerala.gov.in/}
+
+\bibitem{plfs}
+Ministry of Statistics and Programme Implementation.
+\textit{Annual Report, Periodic Labour Force Survey 2023--24}.
+Government of India.
+
+\bibitem{census}
+Office of the Registrar General \& Census Commissioner, India.
+\textit{Population Census 2011}.
+Government of India.
+
+\bibitem{hces}
+Ministry of Statistics and Programme Implementation.
+\textit{Household Consumption Expenditure Survey 2022--23}.
+Government of India.
+
+\bibitem{nationalaccounts}
+Ministry of Statistics and Programme Implementation.
+\textit{National Accounts Statistics}.
+Government of India.
+
+\bibitem{nss}
+Ministry of Statistics and Programme Implementation.
+\textit{National Sample Survey Programme}.
+Government of India.
+
+\end{thebibliography}
+
+\end{document}
